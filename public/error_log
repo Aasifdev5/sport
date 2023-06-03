@@ -1,0 +1,2 @@
+[03-Jun-2023 07:02:59 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\PlayerManagementController::lock_unlock() in /home/joblly/public_html/sportwebsite/app/Http/Controllers/PlayerManagementController.php on line 172
+[03-Jun-2023 07:04:02 UTC] PHP Fatal error:  Cannot redeclare App\Http\Controllers\PlayerManagementController::lock_unlock() in /home/joblly/public_html/sportwebsite/app/Http/Controllers/PlayerManagementController.php on line 172
