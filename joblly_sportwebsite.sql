@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 03, 2023 at 05:54 AM
+-- Generation Time: Jun 17, 2023 at 08:12 AM
 -- Server version: 5.7.42-log
 -- PHP Version: 8.1.16
 
@@ -42,7 +42,7 @@ CREATE TABLE `matches_management` (
 --
 
 INSERT INTO `matches_management` (`id`, `time`, `date`, `team1`, `team2`, `created_at`, `updated_at`) VALUES
-(13, '19:48:00', '2023-06-01', 'South Africa', 'India', '2023-06-01 17:16:16', '2023-06-01 17:16:16');
+(14, '05:39:00', '2023-06-08', 'DEN', 'MIA', '2023-06-07 16:08:44', '2023-06-07 16:08:44');
 
 -- --------------------------------------------------------
 
@@ -96,7 +96,7 @@ CREATE TABLE `player_management` (
   `name` varchar(255) NOT NULL,
   `category` varchar(255) NOT NULL,
   `pos` varchar(255) NOT NULL,
-  `fpts` varchar(255) NOT NULL,
+  `fpts` decimal(32,2) NOT NULL,
   `sal` varchar(255) NOT NULL,
   `status` int(11) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -108,38 +108,24 @@ CREATE TABLE `player_management` (
 --
 
 INSERT INTO `player_management` (`id`, `name`, `category`, `pos`, `fpts`, `sal`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Temba Bavuma', 'South Africa', 'C', '75', '8', 1, '2023-06-01 16:51:58', '2023-06-01 16:51:58'),
-(2, 'Yusuf Adam Abdulla', 'South Africa', 'PG', '100', '125', 0, '2023-06-01 16:53:21', '2023-06-03 15:50:20'),
-(3, 'Adams, RA', 'South Africa', 'SG', '22', '13', 0, '2023-06-01 16:53:52', '2023-06-01 16:53:52'),
-(4, 'Rabada', 'South Africa', 'F', '85', '14', 0, '2023-06-01 16:54:23', '2023-06-01 16:54:23'),
-(5, 'FAF', 'South Africa', 'SF', '78', '20', 0, '2023-06-01 16:54:43', '2023-06-01 16:54:43'),
-(6, 'Amla, HM', 'South Africa', 'VC', '45', '19', 1, '2023-06-01 16:55:26', '2023-06-01 16:55:26'),
-(7, 'ABD', 'South Africa', 'WC', '85', '21', 0, '2023-06-01 16:55:59', '2023-06-01 16:55:59'),
-(8, 'Adam Bacher', 'South Africa', 'F', '22', '27', 0, '2023-06-01 16:56:59', '2023-06-01 16:56:59'),
-(9, 'Bradley Barnes', 'South Africa', 'PG', '45', '30', 0, '2023-06-01 16:57:32', '2023-06-01 16:57:32'),
-(10, 'Bedingham, DG', 'South Africa', 'SF', '8', '55', 0, '2023-06-01 16:58:16', '2023-06-01 16:58:16'),
-(11, 'Farhaan Behardien', 'South Africa', 'C', '78', '35', 1, '2023-06-01 16:59:45', '2023-06-01 16:59:45'),
-(12, 'Aubrey Faulkner', 'South Africa', 'SG', '75', '23', 0, '2023-06-01 17:00:42', '2023-06-01 17:00:42'),
-(13, 'Herschelle Gibbs', 'South Africa', 'PG', '78', '40', 0, '2023-06-01 17:01:32', '2023-06-01 17:01:32'),
-(14, 'Simon Harmer', 'South Africa', 'F', '22', '8', 1, '2023-06-01 17:02:20', '2023-06-01 18:10:58'),
-(15, 'Paul Harris', 'South Africa', 'SF', '45', '44', 0, '2023-06-01 17:03:00', '2023-06-01 17:03:00'),
-(16, 'Imran Tahir', 'South Africa', 'SG', '78', '21', 0, '2023-06-01 17:03:53', '2023-06-03 15:50:53'),
-(18, 'Abhishek Sharma', 'India', 'SF', '85', '15', 0, '2023-06-01 17:06:20', '2023-06-01 17:06:20'),
-(19, 'Ravichandran Ashwin', 'India', 'SG', '22', '45', 0, '2023-06-01 17:06:50', '2023-06-01 17:06:50'),
-(20, 'Jasprit Bumrah', 'India', 'C', '78', '19', 0, '2023-06-01 17:07:15', '2023-06-01 17:07:15'),
-(21, 'Ravindra Jadeja', 'India', 'F', '75', '13', 0, '2023-06-01 17:08:00', '2023-06-01 17:08:00'),
-(22, 'sanju samson', 'India', 'PG', '22', '23', 0, '2023-06-01 17:08:23', '2023-06-01 17:08:23'),
-(23, 'Virat Kohli', 'India', 'VC', '45', '21', 0, '2023-06-01 17:08:50', '2023-06-01 17:08:50'),
-(24, 'Bhuvneshwar Kumar', 'India', 'PF', '75', '10', 0, '2023-06-01 17:09:51', '2023-06-01 18:10:18'),
-(25, 'Kuldeep Yadav', 'India', 'SF', '29', '17', 0, '2023-06-01 17:11:05', '2023-06-01 17:11:05'),
-(26, 'Mohammed Siraj', 'India', 'F', '78', '12', 0, '2023-06-01 17:11:36', '2023-06-01 17:11:36'),
-(27, 'Hardik Pandya', 'India', 'WC', '45', '50', 0, '2023-06-01 17:12:03', '2023-06-01 17:12:03'),
-(28, 'Axar Patel', 'India', 'PF', '22', '22', 0, '2023-06-01 17:12:28', '2023-06-01 17:12:28'),
-(29, 'Harshal Patel', 'India', 'PG', '78', '9', 0, '2023-06-01 17:12:56', '2023-06-01 17:12:56'),
-(30, 'Shahbaz Ahmed', 'India', 'WC', '45', '16', 0, '2023-06-01 17:13:49', '2023-06-01 17:13:49'),
-(31, 'Rohit Sharma', 'India', 'C', '22', '11', 0, '2023-06-01 17:14:18', '2023-06-01 17:14:18'),
-(32, 'Shubman Gill', 'India', 'SG', '75', '65', 0, '2023-06-01 17:14:49', '2023-06-01 17:14:49'),
-(33, 'Shardul Thakur', 'India', 'VC', '45', '24', 0, '2023-06-01 17:15:19', '2023-06-01 17:15:19');
+(34, 'J murray', 'DEN', 'PG', 46.82, '19', 1, '2023-06-07 15:28:01', '2023-06-14 12:18:43'),
+(35, 'K Lowry', 'MIA', 'PG', 19.42, '11.5', 0, '2023-06-07 15:33:01', '2023-06-14 12:20:49'),
+(36, 'G VICENT', 'MIA', 'PG', 21.24, '8', 0, '2023-06-07 15:35:16', '2023-06-14 12:21:20'),
+(37, 'K cadwell pope', 'DEN', 'SG', 20.89, '9.5', 0, '2023-06-07 15:38:16', '2023-06-14 12:21:04'),
+(38, 'M strus', 'MIA', 'SG', 17.35, '9.5', 0, '2023-06-07 15:40:13', '2023-06-14 12:21:49'),
+(39, 'D robinson', 'MIA', 'SG', 12.73, '8.5', 0, '2023-06-07 15:41:08', '2023-06-14 12:22:04'),
+(40, 'C brun', 'DEN', 'SG', 7.09, '6.5', 0, '2023-06-07 15:42:52', '2023-06-14 16:05:29'),
+(41, 'j buttler', 'MIA', 'SF', 53.39, '21', 1, '2023-06-07 15:43:57', '2023-06-14 12:18:27'),
+(42, 'M porter jr', 'DEN', 'SF', 29.53, '11.5', 0, '2023-06-07 15:44:56', '2023-06-14 12:20:02'),
+(43, 'C martin', 'MIA', 'SF', 18.20, '10', 0, '2023-06-07 15:45:44', '2023-06-14 12:20:39'),
+(44, 'J green', 'DEN', 'SF', 7.71, '5.5', 0, '2023-06-07 15:47:06', '2023-06-14 12:22:44'),
+(45, 'A gordon', 'DEN', 'PF', 27.20, '11.5', 0, '2023-06-07 15:48:34', '2023-06-14 12:19:51'),
+(46, 'B Brown', 'DEN', 'PF', 20.66, '10.5', 0, '2023-06-07 15:49:27', '2023-06-14 12:20:17'),
+(47, 'K love', 'MIA', 'PF', 19.22, '9.5', 0, '2023-06-07 15:50:13', '2023-06-14 12:21:35'),
+(48, 'H hismith', 'MIA', 'PF', 3.00, '6', 0, '2023-06-07 15:51:07', '2023-06-15 10:47:15'),
+(49, 'N jokik', 'DEN', 'C', 65.52, '25', 0, '2023-06-07 15:52:07', '2023-06-14 12:39:21'),
+(50, 'B adbyo', 'MIA', 'C', 44.14, '16.5', 0, '2023-06-07 15:53:00', '2023-06-14 12:19:30'),
+(51, 'C zeler', 'MIA', 'C', 5.10, '5', 0, '2023-06-07 15:53:52', '2023-06-14 12:22:59');
 
 -- --------------------------------------------------------
 
@@ -161,6 +147,13 @@ CREATE TABLE `teams` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `teams`
+--
+
+INSERT INTO `teams` (`id`, `actual_team1`, `actual_team2`, `team`, `player_id`, `player_name`, `pos`, `sal`, `fpts`, `created_at`, `updated_at`) VALUES
+(1, 'DEN', 'MIA', 'team3', 50, 'B adbyo', NULL, 16.50, 44.14, '2023-06-08 06:38:29', '2023-06-08 06:38:29');
+
 -- --------------------------------------------------------
 
 --
@@ -179,9 +172,8 @@ CREATE TABLE `team_management` (
 --
 
 INSERT INTO `team_management` (`id`, `team`, `created_at`, `updated_at`) VALUES
-(5, 'South Africa', '2023-04-25 01:31:51', '2023-06-01 14:57:03'),
-(19, 'India', '2023-06-01 15:16:38', '2023-06-01 15:16:38'),
-(20, 'Phi', '2023-06-03 12:15:13', '2023-06-03 12:15:13');
+(21, 'DEN', '2023-06-07 15:26:07', '2023-06-07 15:26:07'),
+(22, 'MIA', '2023-06-07 15:26:23', '2023-06-07 15:26:23');
 
 -- --------------------------------------------------------
 
@@ -260,7 +252,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `matches_management`
 --
 ALTER TABLE `matches_management`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -278,19 +270,19 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `player_management`
 --
 ALTER TABLE `player_management`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `team_management`
 --
 ALTER TABLE `team_management`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `users`
